@@ -257,8 +257,8 @@ def player_with_longest_name
   
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
-      if player[:shoe] == max_shoe
-        return player[:rebounds]
+      if player[:name].length == max_shoe
+        return player[:name]
       end
     end
   end
