@@ -267,6 +267,7 @@ end
 
 def long_name_steals_a_ton?
   num_steals = 0
+  steals_guy = ""
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
       if player[:steals] > num_steals
