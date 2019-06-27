@@ -249,16 +249,16 @@ def player_with_longest_name
   name_length = 0
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
-      if player[:name].value.length > name_length
-        name_length = player[:name].length
+      if player[:player_name].length > name_length
+        name_length = player[:player_name].length
       end
     end
   end
   
   game_hash.each do |location, team_data|
     team_data[:players].each do |player|
-      if player[:name].value.length == name_length
-        return player[:name]
+      if player[:player_name].length == name_length
+        return player[:player_name]
       end
     end
   end
