@@ -243,5 +243,5 @@ def winning_team
     end
   end
   
-  home_final > away_final ? home_final : away_final
+  home_final > away_final ? game_hash[:home] : game_hash[:away]
 end
