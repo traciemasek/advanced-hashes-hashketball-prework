@@ -245,6 +245,7 @@ def winning_team
   home_final > away_final ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
 end
 
+=begin
 def player_with_longest_name
   name_length = 0
   game_hash.each do |location, team_data|
@@ -260,6 +261,15 @@ def player_with_longest_name
       if player[:player_name].length == name_length
         return player[:player_name]
       end
+    end
+  end
+end
+=end
+
+def player_with_longest_name
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player|
+      player[:player_name].length.max
     end
   end
 end
