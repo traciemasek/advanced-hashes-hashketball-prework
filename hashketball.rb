@@ -233,7 +233,6 @@ def winning_team
   away_final = 0
   
   game_hash.each do |location, team_data|
-    #binding.pry
     team_data[:players].each do |player|
       if game_hash[:home] 
         home_final += player[:points]
