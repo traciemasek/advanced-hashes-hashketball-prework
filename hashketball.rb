@@ -235,7 +235,7 @@ def winning_team
   game_hash.each do |location, team_data|
     #binding.pry
     team_data[:players].each do |player|
-      if location[:home] #i think the problem is here
+      if game_hash[:home] #i think the problem is here
         home_final += player[:points]
       else
         away_final += player[:points]
