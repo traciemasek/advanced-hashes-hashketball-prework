@@ -285,3 +285,5 @@ def long_name_steals_a_ton?
   end
   steals_guy == player_with_longest_name
 end
+
+# note to self: I feel from big_shoe_rebounds onwards, I was writing some not very Ruby code--lots of repetition; I have a feeling there are enumerables or methods that would clear this up
